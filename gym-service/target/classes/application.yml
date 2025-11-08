@@ -1,0 +1,37 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: gym-backend
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+knife4j:
+  enable: true
+  setting:
+    language: zh-CN
+    enable-swagger-models: true
+    enable-document-manage: true
+    enable-reload-cache-parameter: true
+    enable-after-script: true
+    enable-filter-multipart-apis: true
+    enable-request-cache: true
+    enable-host: false
+    enable-host-text: ""
+    enable-home-custom: false
+    enable-search: false
+    enable-footer: true
+    enable-footer-custom: true
+    enable-dynamic-parameter: false
+    enable-debug: true
+    enable-open-api: false
+    enable-group: true
+
+logging:
+  level:
+    com.gym: debug
+    org.springframework.web: info
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
